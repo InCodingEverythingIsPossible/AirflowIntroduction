@@ -1,0 +1,14 @@
+[2024-10-28T19:44:04.199+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-28T19:44:04.341+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: example_bash_operator.also_run_this scheduled__2024-10-27T00:00:00+00:00 [queued]>
+[2024-10-28T19:44:04.420+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: example_bash_operator.also_run_this scheduled__2024-10-27T00:00:00+00:00 [queued]>
+[2024-10-28T19:44:04.423+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-10-28T19:44:04.530+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): also_run_this> on 2024-10-27 00:00:00+00:00
+[2024-10-28T19:44:04.636+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=694) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-28T19:44:04.649+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'example_bash_operator', 'also_run_this', 'scheduled__2024-10-27T00:00:00+00:00', '--job-id', '128', '--raw', '--subdir', '/home/***/.local/lib/python3.12/site-packages/***/example_dags/example_bash_operator.py', '--cfg-path', '/tmp/tmp3m3u9ey0']
+[2024-10-28T19:44:04.674+0000] {standard_task_runner.py:72} INFO - Started process 718 to run task
+[2024-10-28T19:44:04.674+0000] {standard_task_runner.py:105} INFO - Job 128: Subtask also_run_this
+[2024-10-28T19:44:19.599+0000] {cli_action_loggers.py:177} WARNING - Failed to log action (psycopg2.OperationalError) could not translate host name "postgres" to address: Temporary failure in name resolution
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)

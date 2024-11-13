@@ -1,0 +1,21 @@
+[2024-11-12T15:56:55.376+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-11-12T15:56:55.390+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: consumer.read_dataset dataset_triggered__2024-11-12T15:56:54.625577+00:00 [queued]>
+[2024-11-12T15:56:55.397+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: consumer.read_dataset dataset_triggered__2024-11-12T15:56:54.625577+00:00 [queued]>
+[2024-11-12T15:56:55.397+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-11-12T15:56:55.411+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): read_dataset> on 2024-11-12 15:56:54.625577+00:00
+[2024-11-12T15:56:55.415+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=93) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-11-12T15:56:55.417+0000] {standard_task_runner.py:72} INFO - Started process 96 to run task
+[2024-11-12T15:56:55.417+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'consumer', 'read_dataset', 'dataset_triggered__2024-11-12T15:56:54.625577+00:00', '--job-id', '237', '--raw', '--subdir', 'DAGS_FOLDER/consumer.py', '--cfg-path', '/tmp/tmpb1mf_w4h']
+[2024-11-12T15:56:55.418+0000] {standard_task_runner.py:105} INFO - Job 237: Subtask read_dataset
+[2024-11-12T15:56:55.459+0000] {task_command.py:467} INFO - Running <TaskInstance: consumer.read_dataset dataset_triggered__2024-11-12T15:56:54.625577+00:00 [running]> on host 896d5b9d81c0
+[2024-11-12T15:56:55.530+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='consumer' AIRFLOW_CTX_TASK_ID='read_dataset' AIRFLOW_CTX_EXECUTION_DATE='2024-11-12T15:56:54.625577+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='dataset_triggered__2024-11-12T15:56:54.625577+00:00'
+[2024-11-12T15:56:55.531+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-11-12T15:56:55.533+0000] {logging_mixin.py:190} INFO - producer update
+[2024-11-12T15:56:55.533+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-11-12T15:56:55.543+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-11-12T15:56:55.544+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=consumer, task_id=read_dataset, run_id=dataset_triggered__2024-11-12T15:56:54.625577+00:00, execution_date=20241112T155654, start_date=20241112T155655, end_date=20241112T155655
+[2024-11-12T15:56:55.591+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-11-12T15:56:55.605+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-11-12T15:56:55.609+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
